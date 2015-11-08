@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html>
+
+
+  <head>
+    <meta charset="utf-8">
+    <title>Section scroller one-page template</title>
+    <meta name="description" content="This one page example has a fixed navbar and full page height sections. Each section is vertically centered on larger screens, and then stack responsively on smaller screens. Scrollspy is used to activate the current menu item. This layout also has a contact form example. Uses animate.css, FontAwesome, Google Fonts (Lato and Bitter) and Bootstrap." />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="generator" content="Codeply">
+
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css" />
+    <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" rel="stylesheet" />
+    <link href="//cdnjs.cloudflare.com/ajax/libs/animate.css/3.1.1/animate.min.css" rel="stylesheet" />
+    
+    <!-- Bootstrap -->
+<!--     <link href="http://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/2.3.2/css/bootstrap-responsive.min.css" rel="stylesheet" media="screen">  -->
+<!--      <link href="http://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/2.3.2/css/bootstrap.min.css" rel="stylesheet" media="screen">  -->
+
+<!--      <link href="css/solrstrap.css" rel="stylesheet" media="screen"> -->
+
+	<link rel="stylesheet" href="css/styles.css" />
+  </head>
+  
+  
+  <body>
+  <script src="js/jquery-1.6.2.min.js"></script>
+  <script src="js/script.js"></script>
+  
+	<nav class="navbar navbar-trans navbar-fixed-top" role="navigation">
+		<div class="container">
+			<div class="navbar-collapse collapse" id="navbar-collapsible">
+				<ul class="nav navbar-nav navbar-left">
+					<li><a href="index.html">Accueil</a></li>
+				</ul>
+				<ul class="nav navbar-nav navbar-right">
+				<li><a href="recherche.html">Recherche</a></li>
+				</ul>
+			</div>
+		</div>
+	</nav>
+
+	<!-- Recherche par mot clé-->
+<!--	<div class="container v-center">
+        <div class="row">
+			<div class="navbar navbar-fixed-top">
+				<div class="navbar-inner">
+					<div class="container">
+						<a class="brand" href="#">Solrstrap</a>
+						<form class="navbar-search" style="float:right">
+							<div id="search-div">
+								<input type="text" class="search-query span8" placeholder="Cherchez un ressenti ici" onfocus="this.value = this.value;" id="solrstrap-searchbox" name="q">
+							</div>
+						</form>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>-->
+	
+	
+<section class="container-fluid" id="section5" style="display:none">
+    <div class="row">
+        <div class="col-sm-6 col-sm-offset-3 col-md-5 col-md-offset-3">
+            <h2 class="text-center lato">Voici le parcours que vous avez créé</h2>
+			<div id="list-results">
+
+			</div>
+        </div>
+    </div>
+</section>
+
+<section class="container-fluid" id="section3" style="display:none">
+    <!--h1 class="text-center">A Bootstrap Foundation</h1-->
+    <div class="row">
+        <div class="col-sm-10 col-sm-offset-1" id="list-one-form">
+
+        </div>
+    </div>
+</section>
+
+<section class="container-fluid" id="section4" style="display:none">
+    <!--h1 class="text-center">A Bootstrap Foundation</h1-->
+    <div class="row">
+        <div class="col-sm-6 col-sm-offset-3" id="list-one-result">
+
+        </div>
+    </div>
+</section>
+
+   
+<section class="container-fluid" id="recherche">
+
+        <!--     Recherche par mots clés -->
+		<div class="row">
+		<div class="col-lg-6">
+			<h2>Entrez l'émotion que vous désirez visiter pour créer votre parcours: </h2>
+		</div>
+			<div class="col-lg-6">
+				<div class="input-group">
+					<!--<form id="search-box">
+						<input type="text" id="search" class="form-control" placeholder="Cherchez un ressenti ici..">
+							<button id="searchbtn" type="submit" class="btn btn-default">GO</button>
+					</form>-->
+					<form id="search_box">
+<!-- 			<div class="wrapper"> -->
+				<input type="text" id="search" class="form-control"  placeholder="un mot représentant un concept de ressenti" />
+				<button id="searchbtn" class="search_btn">GO</button>
+<!-- 			</div> -->
+		</form>
+				</div><!-- /input-group -->
+			</div><!-- /.col-lg-6 -->
+		</div><!-- /.row -->
+		    <div class="container">
+      <div class="row">
+        <div id="solrstrap-facets" class="span4"></div>
+        <div id="solrstrap-hits" class="span8"></div>
+      </div>
+    </div>
+
+        <!--     Recherche par thematique -->
+        </div> <!--row-->
+        <div class="row">
+			<div class="panel-body">
+				<h2>Recherche par Ressenti</h2>
+			</div>
+            <div class="col-sm-4">
+                <div class="row">
+                    <div class="col-sm-12 text-center">
+                        <div class="panel panel-default slideInLeft animate">
+                            <div class="panel-heading">
+                            <h3>Sensuel</h3></div>
+                            <div class="panel-body">
+                                <p><a href="#" class="search-feel" data-feel="sensuel" ><img src="css/img/sensuel.png" class="img-rounded" alt="Sensualité" ></a> </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-4 text-center">
+                <div class="row">
+                    <div class="col-sm-12 text-center">
+                        <div class="panel panel-default slideInUp animate">
+                            <div class="panel-heading">
+                            <h3>Intimité</h3></div>
+                            <div class="panel-body">
+                                <p><a href="#" class="search-feel" data-feel="intimité" ><img src="css/img/intriguant.png" class="img-rounded" alt="Intime"></a></p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-4 text-center">
+                <div class="row">
+                    <div class="col-sm-12 text-center">
+                        <div class="panel panel-default slideInRight animate">
+                            <div class="panel-heading">
+                            <h3>Peur</h3></div>
+                            <div class="panel-body">
+                                <p><a href="#" class="search-feel" data-feel="peur" ><img src="css/img/repoussant.png" class="img-rounded" alt="Peur"></a></p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+        </div>  <!--/row-->
+        
+        <!--     Recherche par thematique -->
+        <div class="row">
+			<div class="panel-body">
+				<h2>Recherche par thématiques</h2>
+			</div>
+            <div class="col-sm-4">
+                <div class="row">
+                    <div class="col-sm-12 text-center">
+                        <div class="panel panel-default slideInLeft animate">
+                            <div class="panel-heading">
+                            <h3>L'objet qui ne fait pas son âge</h3></div>
+                            <div class="panel-body">
+                                <p><a href="#" class="search-path" data-path="age" ><img src="css/img/age.png" class="img-rounded" alt="Age" ></a> </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-4 text-center">
+                <div class="row">
+                    <div class="col-sm-12 text-center">
+                        <div class="panel panel-default slideInUp animate">
+                            <div class="panel-heading">
+                            <h3>L'objet qui donne envie d'être amoureux</h3></div>
+                            <div class="panel-body">
+                                <p><a href="#" class="search-path" data-path="amoureux" ><img src="css/img/amoureux.png" class="img-rounded" alt="Amoureux" ></a> </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-4 text-center">
+                <div class="row">
+                    <div class="col-sm-12 text-center">
+                        <div class="panel panel-default slideInRight animate">
+                            <div class="panel-heading">
+                            <h3>L'objet qui... X</h3></div>
+                            <div class="panel-body">
+                                <p><a href="#" class="search-path" data-path="x" ><img src="css/img/x.png" class="img-rounded" alt="X" ></a> </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+        </div> <!--/row-->
+        <div class="row">
+            <div class="col-sm-4">
+                <div class="row">
+                    <div class="col-sm-12 text-center">
+                        <div class="panel panel-default slideInLeft animate">
+                            <div class="panel-heading">
+                            <h3>L'objet que j'utiliserais comme déco d'Halloween</h3></div>
+                            <div class="panel-body">
+                                <p><a href="#" class="search-path" data-path="age" ><img src="css/img/halloween.png" class="img-rounded" alt="Age" ></a> </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-4 text-center">
+                <div class="row">
+                    <div class="col-sm-12 text-center">
+                        <div class="panel panel-default slideInUp animate">
+                            <div class="panel-heading">
+                            <h3>L'objet qui me fait marrer</h3></div>
+                            <div class="panel-body">
+                                <p><a href="#" class="search-path" data-path="rire" ><img src="css/img/rire.png" class="img-rounded" alt="Rire" ></a> </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-4 text-center">
+                <div class="row">
+                    <div class="col-sm-12 text-center">
+                        <div class="panel panel-default slideInRight animate">
+                            <div class="panel-heading">
+                            <h3>L'objet zen</h3></div>
+                            <div class="panel-body">
+                                <p><a href="#" class="search-path" data-path="zen" ><img src="css/img/zen.png" class="img-rounded" alt="Zen" ></a> </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+        </div> <!--/row-->
+    </div>
+    <!--/container-->
+</section>
+
+
+
+
+    <!--load scripts at the bottom-->
+    
+<!--    <script type="text/javascript" src="http://cdnjs.cloudflare.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+    <script type="text/javascript" src="http://cdnjs.cloudflare.com/ajax/libs/jquery-migrate/1.2.1/jquery-migrate.min.js"></script>
+
+    <script type="text/javascript" src="http://cdnjs.cloudflare.com/ajax/libs/jquery.ba-bbq/1.2.1/jquery.ba-bbq.min.js"></script>
+
+
+<script type="text/javascript" src="http://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/2.3.2/js/bootstrap.min.js"></script>
+
+    <script type="text/javascript" src="http://cdnjs.cloudflare.com/ajax/libs/handlebars.js/1.0.0/handlebars.min.js"></script>
+    <script type='text/javascript' src="js/solrstrap.js"></script>-->
+
+    <!--scripts loaded here-->
+    
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+    <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
+    
+    <script src="js/scripts.js"></script>
+  </body>
+</html>
